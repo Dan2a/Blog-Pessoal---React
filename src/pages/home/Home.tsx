@@ -3,7 +3,7 @@ function Home() {
     <>
       <div
         style={{
-          backgroundColor: "#312e81",
+          backgroundColor: "#2563EB",
           display: "flex",
           justifyContent: "center",
         }}
