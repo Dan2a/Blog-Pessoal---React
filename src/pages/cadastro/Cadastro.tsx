@@ -2,7 +2,7 @@ import { useEffect, useState, type ChangeEvent, type FormEvent } from "react";
 import { useNavigate } from "react-router-dom";
 import { ClipLoader } from "react-spinners";
 import type Usuario from "../../models/Usuario";
-import { cadastrarUsuario } from "../../Service";
+import { cadastrarUsuario } from "../../services/Service";
 
 function Cadastro() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ function Cadastro() {
   }, [usuario]);
 
   function retornar() {
-    navigate("/");
+    navigate("/login");
   }
 
   function atualizarEstado(e: ChangeEvent<HTMLInputElement>) {
@@ -165,7 +165,7 @@ function Cadastro() {
               {isLoading ? (
                 <ClipLoader color="#ffffff" size={24} />
               ) : (
-                <span>Cadastrar</span>
+                <span>Cadastra</span>
               )}
             </button>
           </div>
