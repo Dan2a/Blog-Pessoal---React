@@ -1,73 +1,82 @@
-# React + TypeScript + Vite
+# 💻 Blog Pessoal - Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao repositório do Front-end do projeto **Blog Pessoal**! Este projeto é uma Rede Social desenvolvida utilizando o ecossistema React, permitindo aos usuários criar contas, fazer login, postar conteúdos e gerenciar temas.
 
-Currently, two official plugins are available:
+O projeto foi construído com foco em performance e componentização, utilizando as versões mais recentes do React e Vite.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Links de Acesso
 
-## React Compiler
+- **🚀 Deploy (Aplicação no Ar):** [Acessar Blog Pessoal](https://blog-pessoal-react-one-sooty.vercel.app/)
+- **🌐 Backend (API):** [Endpoint da API](https://blogpessoal-8bel.onrender.com)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+O projeto foi desenvolvido utilizando as seguintes tecnologias e bibliotecas:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Core & Build
+- **[React](https://react.dev/)** (v19) - Biblioteca principal para construção da interface.
+- **[TypeScript](https://www.typescriptlang.org/)** - Superset JavaScript para tipagem estática e segurança no código.
+- **[Vite](https://vitejs.dev/)** (v7) - Ferramenta de build rápida e servidor de desenvolvimento.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Estilização & Design
+- **[Tailwind CSS](https://tailwindcss.com/)** (v4) - Framework CSS *utility-first* para estilização ágil e responsiva.
+- **[@phosphor-icons/react](https://phosphoricons.com/)** - Biblioteca de ícones moderna e flexível.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Navegação & Integração
+- **[React Router Dom](https://reactrouter.com/)** (v7) - Gerenciamento de rotas da aplicação (SPA).
+- **[Axios](https://axios-http.com/)** - Cliente HTTP para consumo da API REST.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Componentes & Utilitários
+- **[React Toastify](https://fkhadra.github.io/react-toastify/)** - Feedback visual para o usuário (alertas de sucesso/erro).
+- **[React Spinners](https://www.davidhu.io/react-spinners/)** - Indicadores de carregamento (*loading*).
+- **[Reactjs Popup](https://react-popup.elazizi.com/)** - Criação de modais e popups.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ⚙️ Como rodar o projeto localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Siga os passos abaixo para executar o projeto em sua máquina:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Pré-requisitos
+Tenha o **[Node.js](https://nodejs.org/)** instalado.
+
+### Passo a passo
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/Dan2a/blog-pessoal-react.git
+   ```
+
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd blog-pessoal-react
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Configuração da Variável de Ambiente:**
+   Crie um arquivo chamado `.env` na raiz do projeto e adicione a URL da API (conforme configurado no `Service.ts`):
+   ```env
+   VITE_API_URL=https://blogpessoal-8bel.onrender.com
+   ```
+
+5. **Execute o projeto:**
+   ```bash
+   npm run dev
+   ```
+
+6. **Acesse no navegador:**
+   O projeto estará rodando geralmente em `http://localhost:5173`.
+
+## ✒️ Autor
+
+Desenvolvido por **Daniel Andrade**.
+
+- [LinkedIn](https://www.linkedin.com/in/d2aa1303/)
+- [GitHub](https://github.com/Dan2a)
+
+---
+
+Projeto desenvolvido para fins de aprendizado e portfólio.
+
